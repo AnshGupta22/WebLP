@@ -1,0 +1,31 @@
+<!-- Numerical methods CA-2 Project
+Project Name: 'WebLP: Oneline Linear Programming Solver'
+Author: Ansh Gupta-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Solver</title>
+</head>
+<body>
+    <h1>Linear Programming Solver</h1>
+    <form action="/solve_lp" method="post">
+        <label for="problem_type">Problem Type:</label>
+        <select name="problem_type" required>
+            <option value="min">Minimization</option>
+            <option value="max">Maximization</option>
+        </select><br>
+        <label for="obj_coefficients">Objective Function Coefficients (comma-separated):</label>
+        <input type="text" name="obj_coefficients" required><br>
+        
+        <label for="lhs_coefficients">Matrix of Coefficients for Constraints (semicolon-separated rows, comma-separated values):</label>
+        <textarea name="lhs_coefficients" rows="4" required></textarea><br>
+
+        <label for="rhs_values">Right-hand side values of Constraints (comma-separated):</label>
+        <input type="text" name="rhs_values" required><br>
+
+        <button type="submit">Solve</button>
+    </form>
+</body>
+</html>
